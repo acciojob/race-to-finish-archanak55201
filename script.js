@@ -30,6 +30,14 @@ let prom2= new Promise((resolve)=>{
 })
 promises=[prom1,prom2,prom3,prom4,prom5];
 let x=Promise.any(promises);
+let data1;
+x.then((data)=>{
+  div.innerText=data;
+
+})
+x.catch((data)=>{
+  div.innerText=data;
+
+})
 	
-div.innerText=x;
 	
