@@ -1,12 +1,13 @@
-window.promises = [prom1,prom2,prom3,prom4,prom5];
+// window.promises = [prom1,prom2,prom3,prom4,prom5];
 
 // Do not change the code above this
 // add your promises to the array `promises`
+let div=document.getElementById("output");
 let prom1= new Promise((resolve)=>{
 	setTimeout(()=>{
 		resolve();
 	},2000)
-
+})
 let prom2= new Promise((resolve)=>{
 	setTimeout(()=>{
 		resolve();
@@ -15,7 +16,7 @@ let prom2= new Promise((resolve)=>{
 	let prom3= new Promise((resolve)=>{
 	setTimeout(()=>{
 		resolve();
-	},6000)
+	},1000)
 })
 	let prom4= new Promise((resolve)=>{
 	setTimeout(()=>{
@@ -29,6 +30,6 @@ let prom2= new Promise((resolve)=>{
 })
 promises=[prom1,prom2,prom3,prom4,prom5];
 let x=Promise.any(promises);
-	let div=document.getElementById("output");
-	div.innerHTML=x;
+	
+div.innerText=x;
 	
